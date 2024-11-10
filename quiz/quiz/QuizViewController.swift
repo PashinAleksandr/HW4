@@ -12,22 +12,24 @@ import UIKit
 class QuizViewController: UIViewController {
    
     
-    var questionOne: Question = Question(image: UIImage.init(named: "Old_(film)_poster")!, question: "Как звали мужа в Фильме Old?", questionAnswer: "Гай",rightButton: "Гай",leftButton: "Дейв", nameOfQuastions: "1")
-    var questionTwo: Question = Question(image: UIImage.init(named: "Tesla")!, question: "Кто изобрел телефон?", questionAnswer: "Белл", rightButton: "Белл", leftButton: "Тесла", nameOfQuastions: "2")
-    var questionThree: Question = Question(image: UIImage.init(named: "avengers")!, question: "Кто повредил глаз Фьюри?", questionAnswer: "Флеркин", rightButton: "Кот", leftButton: "Флеркин", nameOfQuastions: "3")
-    var questionFour: Question = Question(image: UIImage.init(named: "Default 1")!, question: "Куда несут кольцо?", questionAnswer: "В Мордер", rightButton: "К Саурону", leftButton: "В Мордер", nameOfQuastions: "4")
-    var qustionFive: Question = Question(image: UIImage.init(named: "Default")!, question: "Какой рейтинг у этого фильма на IMDb?", questionAnswer: "3.6", rightButton: "5.6", leftButton: "3.6", nameOfQuastions: "5")
-    var questionSix: Question = Question(image: UIImage.init(named: "godFather")!, question: "Кто по национальности главные герои?", questionAnswer: "Итальянци", rightButton: "Американци", leftButton: "Итальянци", nameOfQuastions: "6")
-    var questionSeven: Question = Question(image: UIImage.init(named: "green knight")!, question: "Сдержал ли слово главный герой?", questionAnswer: "Да",rightButton: "Да", leftButton: "Нет", nameOfQuastions: "7")
-    var questionEight: Question = Question(image: UIImage.init(named: "ice age")!, question: "Кто пукает тот идет...", questionAnswer: "Последний", rightButton: "После Бака", leftButton: "Последний", nameOfQuastions: "8")
-    var questionNine: Question = Question(image: UIImage.init(named: "vivarium")!, question: "В каком году вышел этот фильм", questionAnswer: "2019",rightButton: "2018", leftButton: "2019", nameOfQuastions: "9")
+    var questionOne: Question = Question(image: UIImage.init(named: "Old_(film)_poster")!, question: "Рейтинг этого фильма выше 5 на IMDb?", questionAnswer: "Да",rightButton: "Да",leftButton: "Нет", nameOfQuastions: "1")
+    var questionTwo: Question = Question(image: UIImage.init(named: "Tesla")!, question: "Рейтинг этого фильма выше 8 на IMDb?", questionAnswer: "Да", rightButton: "Да", leftButton: "Нет", nameOfQuastions: "2")
+    var questionThree: Question = Question(image: UIImage.init(named: "avengers")!, question: "Рейтинг этого фильма ниже 5 на IMDb?", questionAnswer: "Нет", rightButton: "Да", leftButton: "Нет", nameOfQuastions: "3")
+    var questionFour: Question = Question(image: UIImage.init(named: "Default 1")!, question: "Рейтинг этого фильма выше 5 на IMDb?", questionAnswer: "Нет", rightButton: "Да", leftButton: "Нет", nameOfQuastions: "4")
+    var qustionFive: Question = Question(image: UIImage.init(named: "Default")!, question: "Рейтинг этого фильма выше 5 на IMDb?", questionAnswer: "Да", rightButton: "Нет", leftButton: "Нет", nameOfQuastions: "5")
+    var questionSix: Question = Question(image: UIImage.init(named: "godFather")!, question: "Рейтинг этого фильма выше 5 на IMDb?", questionAnswer: "Да", rightButton: "Да", leftButton: "Нет", nameOfQuastions: "6")
+    var questionSeven: Question = Question(image: UIImage.init(named: "green knight")!, question: "Рейтинг этого фильма выше 9 на IMDb?", questionAnswer: "Нет",rightButton: "Нет", leftButton: "Нет", nameOfQuastions: "7")
+    var questionEight: Question = Question(image: UIImage.init(named: "ice age")!, question: "Рейтинг этого фильма выше 5 на IMDb?", questionAnswer: "Нет", rightButton: "Да", leftButton: "Нет", nameOfQuastions: "8")
+    var questionNine: Question = Question(image: UIImage.init(named: "vivarium")!, question: "Рейтинг этого фильма выше 5 на IMDb?", questionAnswer: "Да",rightButton: "Да", leftButton: "Нет", nameOfQuastions: "9")
 
 
     
-    var array: [Question] = []
-    var numbOfQuestion: Int = 0
-    var score: Int = 0
-    var nunberOfCorrectAnswers: Int = 0
+    private var array: [Question] = []
+    private var numbOfQuestion: Int = 0
+    private var score: Int = 0
+    private var nunberOfCorrectAnswers: Int = 0
+    
+    
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionNumber: UILabel!
@@ -47,40 +49,44 @@ class QuizViewController: UIViewController {
         viewIsRD()
     }
     
-    @IBAction func didAnswer(_ sender: UIButton) {
-        if array[numbOfQuestion].questionAnswer == sender.titleLabel?.text {
-            increaseScore()
-            questionImage.layer.borderColor = UIColor.green.cgColor
-        } else {
-            questionImage.layer.borderColor = UIColor.red.cgColor
-        }
+    @IBAction private func didAnswer(_ sender: UIButton) {
+        questionImage.layer.masksToBounds = true
+        questionImage.layer.borderWidth = 8
+        questionImage.layer.borderColor = isCorrect(sender) ? UIColor.ypGreen.cgColor : UIColor.ypRed.cgColor
+        
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             
       
-    
             if self.numbOfQuestion + 1 >= self.array.count {
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            guard let resolvedViewController = mainStoryboard.instantiateViewController(identifier: "ResoltViewController") as? ResoltViewController else {
-                return
-            }
-
-                resolvedViewController.score = self.score
-                self.show(resolvedViewController, sender: nil)
-            
                 self.showAlert(title: "Этот раунд окончен! \n Хочешь начать заново?", massege: "Твой результат:\(self.nunberOfCorrectAnswers) из \(self.array.count) \n Ваш счет: \(self.score)")
+
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let quizViewController = mainStoryboard.instantiateViewController(identifier: "QuizViewController")
+                self.show(quizViewController, sender: nil)
+
             return
+            } else {
+                self.questionImage.layer.borderColor = UIColor.clear.cgColor
+               
             }
             self.numbOfQuestion += 1
         
             let question = self.array[self.numbOfQuestion]
             self.display(question: question)
-            self.questionImage.layer.borderColor = UIColor.blue.cgColor
+            
             self.upDateScore()
         }
     }
-    
-    func display(question: Question) {
+    private func isCorrect(_ sender: UIButton) -> Bool {
+        if array[numbOfQuestion].questionAnswer == sender.titleLabel?.text {
+            increaseScore()
+            return true
+        } else {
+            return false
+        }
+    }
+    private func display(question: Question) {
         qustionLabel.text = question.question
         questionImage.image = question.image
         
@@ -98,23 +104,25 @@ class QuizViewController: UIViewController {
         }
     }
     
-    func increaseScore() {
+    private func increaseScore() {
         score += 10
         nunberOfCorrectAnswers += 1
 
         
     }
     
-    func upDateScore() {
+    private func upDateScore() {
         scoreLabel.text = score.description
-        questionNumber.text = "Вопрос \(numbOfQuestion + 1) из \(array.count)"
+        questionNumber.text = "Вопрос:"
+        scoreLabel.text =  "\(numbOfQuestion + 1) / \(array.count)"
     }
     
     func viewIsRD() {
         questionImage.layer.masksToBounds = true
-        questionImage.layer.borderWidth = 1
-        questionImage.layer.borderColor = UIColor.blue.cgColor
+        questionImage.layer.borderWidth = 8
         questionImage.layer.cornerRadius = 6
+        questionImage.layer.borderColor = UIColor.clear.cgColor
+
     }
 
     func showAlert(title: String, massege: String) {
@@ -130,15 +138,25 @@ class QuizViewController: UIViewController {
         
     }
     
-    func newGame() {
+    private func newGame() {
         numbOfQuestion = 0
         score = 0
         nunberOfCorrectAnswers = 0
-        
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let quizViewController = mainStoryboard.instantiateViewController(identifier: "QuizViewController")
-        show(quizViewController, sender: nil)
-        
+            self.show(quizViewController, sender: nil)
+
     }
     
+}
+
+extension QuizViewController {
+    struct Question {
+        var image: UIImage
+        var question: String
+        var questionAnswer: String
+        var rightButton: String
+        var leftButton: String
+        var nameOfQuastions: String
+    }
 }

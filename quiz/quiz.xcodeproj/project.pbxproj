@@ -7,27 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D45FD26C26A376A1007BCF5F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FD26B26A376A1007BCF5F /* RootViewController.swift */; };
-		D45FD26E26A37745007BCF5F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FD26D26A37745007BCF5F /* SettingsViewController.swift */; };
+		D436D1DA2CDA873700561161 /* YS Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4DA81462C88A5D900EF2CED /* YS Display-Bold.ttf */; };
+		D436D1DB2CDA873B00561161 /* YS Display-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4DA81472C88A5D900EF2CED /* YS Display-Medium.ttf */; };
 		D462CBB0265584900018E07E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D462CBAF265584900018E07E /* AppDelegate.swift */; };
 		D462CBB2265584900018E07E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D462CBB1265584900018E07E /* SceneDelegate.swift */; };
 		D462CBB7265584900018E07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D462CBB5265584900018E07E /* Main.storyboard */; };
 		D462CBB9265584920018E07E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D462CBB8265584920018E07E /* Assets.xcassets */; };
 		D462CBBC265584920018E07E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D462CBBA265584920018E07E /* LaunchScreen.storyboard */; };
 		D462CBC42655857D0018E07E /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D462CBC32655857D0018E07E /* QuizViewController.swift */; };
-		D464E9D2269AC649006125FF /* HW.swift in Sources */ = {isa = PBXBuildFile; fileRef = D464E9D1269AC649006125FF /* HW.swift */; };
-		D47502A826A41E8600B1FBA4 /* SegueTesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47502A726A41E8600B1FBA4 /* SegueTesViewController.swift */; };
-		D494557B269F511100A3DDC6 /* ResoltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494557A269F511100A3DDC6 /* ResoltViewController.swift */; };
-		D4DA81482C88A5D900EF2CED /* YS Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4DA81462C88A5D900EF2CED /* YS Display-Bold.ttf */; };
-		D4DA81492C88A5D900EF2CED /* YS Display-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4DA81472C88A5D900EF2CED /* YS Display-Medium.ttf */; };
 		D4DA814C2C8B52A300EF2CED /* UICollorExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DA814B2C8B52A300EF2CED /* UICollorExtentions.swift */; };
-		D4E9E95C26961B7B004478AA /* SeguePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E9E95B26961B7B004478AA /* SeguePractice.swift */; };
-		D4EC45BD2CCE9B7B009B9AF8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC45BC2CCE9B7B009B9AF8 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D45FD26B26A376A1007BCF5F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		D45FD26D26A37745007BCF5F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D462CBAC265584900018E07E /* quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D462CBAF265584900018E07E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D462CBB1265584900018E07E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,14 +27,9 @@
 		D462CBBB265584920018E07E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D462CBBD265584920018E07E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D462CBC32655857D0018E07E /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		D464E9D1269AC649006125FF /* HW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW.swift; sourceTree = "<group>"; };
-		D47502A726A41E8600B1FBA4 /* SegueTesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueTesViewController.swift; sourceTree = "<group>"; };
-		D494557A269F511100A3DDC6 /* ResoltViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResoltViewController.swift; sourceTree = "<group>"; };
 		D4DA81462C88A5D900EF2CED /* YS Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Bold.ttf"; sourceTree = "<group>"; };
 		D4DA81472C88A5D900EF2CED /* YS Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Medium.ttf"; sourceTree = "<group>"; };
 		D4DA814B2C8B52A300EF2CED /* UICollorExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollorExtentions.swift; sourceTree = "<group>"; };
-		D4E9E95B26961B7B004478AA /* SeguePractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePractice.swift; sourceTree = "<group>"; };
-		D4EC45BC2CCE9B7B009B9AF8 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,19 +65,12 @@
 				D4DA81452C88A57C00EF2CED /* font */,
 				D462CBAF265584900018E07E /* AppDelegate.swift */,
 				D462CBB1265584900018E07E /* SceneDelegate.swift */,
-				D494557A269F511100A3DDC6 /* ResoltViewController.swift */,
 				D462CBC32655857D0018E07E /* QuizViewController.swift */,
-				D4EC45BC2CCE9B7B009B9AF8 /* Question.swift */,
 				D4DA814A2C8B525700EF2CED /* Extentions */,
 				D462CBB5265584900018E07E /* Main.storyboard */,
-				D45FD26B26A376A1007BCF5F /* RootViewController.swift */,
-				D45FD26D26A37745007BCF5F /* SettingsViewController.swift */,
 				D462CBB8265584920018E07E /* Assets.xcassets */,
 				D462CBBA265584920018E07E /* LaunchScreen.storyboard */,
-				D464E9D1269AC649006125FF /* HW.swift */,
 				D462CBBD265584920018E07E /* Info.plist */,
-				D4E9E95B26961B7B004478AA /* SeguePractice.swift */,
-				D47502A726A41E8600B1FBA4 /* SegueTesViewController.swift */,
 			);
 			path = quiz;
 			sourceTree = "<group>";
@@ -172,9 +151,9 @@
 			files = (
 				D462CBBC265584920018E07E /* LaunchScreen.storyboard in Resources */,
 				D462CBB9265584920018E07E /* Assets.xcassets in Resources */,
+				D436D1DA2CDA873700561161 /* YS Display-Bold.ttf in Resources */,
 				D462CBB7265584900018E07E /* Main.storyboard in Resources */,
-				D4DA81482C88A5D900EF2CED /* YS Display-Bold.ttf in Resources */,
-				D4DA81492C88A5D900EF2CED /* YS Display-Medium.ttf in Resources */,
+				D436D1DB2CDA873B00561161 /* YS Display-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,14 +167,7 @@
 				D462CBB0265584900018E07E /* AppDelegate.swift in Sources */,
 				D4DA814C2C8B52A300EF2CED /* UICollorExtentions.swift in Sources */,
 				D462CBB2265584900018E07E /* SceneDelegate.swift in Sources */,
-				D464E9D2269AC649006125FF /* HW.swift in Sources */,
-				D45FD26C26A376A1007BCF5F /* RootViewController.swift in Sources */,
-				D494557B269F511100A3DDC6 /* ResoltViewController.swift in Sources */,
-				D4E9E95C26961B7B004478AA /* SeguePractice.swift in Sources */,
 				D462CBC42655857D0018E07E /* QuizViewController.swift in Sources */,
-				D47502A826A41E8600B1FBA4 /* SegueTesViewController.swift in Sources */,
-				D4EC45BD2CCE9B7B009B9AF8 /* Question.swift in Sources */,
-				D45FD26E26A37745007BCF5F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
